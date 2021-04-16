@@ -5,15 +5,16 @@
 body,html{
   font-family: 'Inconsolata', monospace; 
   color:#fff;
+  color:#0075A8;
+
   /* gabriola */
-  background-position: center;
-  background-color: teal;
+  background-color: #0075A8;
   padding: 0;
   margin:0;
   min-height:10;
   height:100%; 
   width:100%;
-  font-size:2vh;
+  font-size:2.5vh;
 }
 .background-image{
     background-color: rgb(20, 19, 19);
@@ -35,53 +36,127 @@ body,html{
 
 header{
     display: flex;
-    background-color:chocolate;
+    color: #FCDEA2;
     width: auto;
     height: 15%;
 }
 
-section{
-    height: 85%;
-    width: 100%;
-    background-color: white;
+ /* P R O F I L E   S E C T I O N  */
+.profilediv{
+    /* background-color: #557a95; */
+    
+    width: 15%;
+    height: 100%;
+    border: 50%;
     display: flex;
-    background-color: coral;
+    flex-direction: column;
+    padding: 0;
+    align-items: center;
+}
+.profilediv img{
+    /* margin-top: 7%; */
+    width: 37%;
+    border-radius: 50%;
+}
+.name{
+    position: absolute;
+    margin-top:6%;
+    font-size: 80%;
+    font-family:Georgia, 'Times New Roman', Times, serif
 }
 
-div{
-    background-color: #000;
+.container{
+    width:85%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.container nav{
+    background-color: #FCDEA2;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    
+    align-items: center;
+}
+
+nav img{
+    background-color: #0075A8;
+    width: 15%;
+    width: 12%;
+    border-radius: 50%;
+    z-index: 1;
+}
+.facebook,.github,.instagram{
+    border: 5px solid #0075A8;
+}
+
+.container .others{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.container .contacts{
+    display: flex;
+    justify-content: space-evenly;
+}
+.container .filesandsettings{
+    display: flex;
+    padding-left:16%;
+}
+body div{
     height: 85%;
 }
 
 .main:hover .clip{
-    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+    /* clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%); */
+    
+    clip-path: polygon(100% 100%, 100% 100%, 100% 100%, 100% 100%);
+    border: 20px solid #0075A8;
+    transition: clip-path 1s ease-in-out;
 }
+
+.clip1:hover{
+}
+
+/* ok */
 .main .clip:hover{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
 .clip{
-    margin: 0px;
-    background-clip: border-box;
+    cursor: pointer;
 }
 
+
 .clip.clip1{
-    background-color: rgb(19, 61, 17);
-    padding: 2% 5%;
     position: absolute;
-    clip-path: polygon(0 0, 70% 0, 0 100%, 0 100%);
+    background-color:#FCDEA2;
+    /* border: 10px solid #0075A8; */
+    padding: 2% 5%;
+    /* clip-path: polygon(0 0, 70% 0, 0 100%, 0 100%); */
+    clip-path: polygon(0 0, 65% 0, 37% 44%, 0 100%);
 }
 
 .clip.clip2{
-    background-color: rgb(195, 207, 19);
-    padding: 2% 5%;
+
     position: absolute;
-    clip-path: polygon(70% 0, 100% 0, 100% 100%, 39% 44%);
+    background-color:#FCDEA2;
+    /* clip-path: polygon(70% 0, 100% 0, 100% 100%, 39% 44%); */
+    clip-path: polygon(65% 0, 100% 0, 100% 100%, 40% 42%);
+    /* clip-path: polygon(65% 0, 100% 0, 100% 100%, 39% 44%); */
     text-align: right;
+    padding: 2% 5%;
 }
 .clip.clip3{
-    background-color: rgb(73, 75, 177);
+    
     position: absolute;
+    background-color:#FCDEA2;
+
+    clip-path: polygon(39% 44%, 39% 44%, 100% 100%, 0 100%);
     clip-path: polygon(39% 44%, 39% 44%, 100% 100%, 0 100%);
 }
 
