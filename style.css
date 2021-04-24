@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    font-family: 'Gabriela', serif;
 }
 
 body,html{
@@ -16,23 +17,6 @@ body,html{
   width:100%;
   font-size:2.5vh;
 }
-.background-image{
-    background-color: rgb(20, 19, 19);
-    width: 100%;
-    height: 100%;
-    max-height: 100%;
-    margin-left: 0;
-    padding: 0;
-    margin:0;
-    /* background-image: url("Resurse/background.png"); */
-    background-repeat: no-repeat;
-   
-    background-attachment: fixed; 
-    height:100vh;
-    background-size:100% 100%;
-    background-repeat: no-repeat;
-    
-}
 
 header{
     display: flex;
@@ -43,8 +27,6 @@ header{
 
  /* P R O F I L E   S E C T I O N  */
 .profilediv{
-    /* background-color: #557a95; */
-    
     width: 15%;
     height: 100%;
     border: 50%;
@@ -54,15 +36,28 @@ header{
     align-items: center;
 }
 .profilediv img{
-    /* margin-top: 7%; */
+    margin-top: 3%; 
     width: 37%;
     border-radius: 50%;
 }
+.profilediv img:hover{
+    border-radius: 0%;
+}
+.profilediv img:active{
+    border-radius: 0%;
+    position: absolute;
+    margin-top: 0%; 
+    margin-left: 15%; 
+    z-index: 1;
+    width: 50%;
+    height: 100%;
+}
+
+
 .name{
     position: absolute;
-    margin-top:6%;
+    top:11%;
     font-size: 80%;
-    font-family:Georgia, 'Times New Roman', Times, serif
 }
 
 .container{
@@ -78,19 +73,34 @@ header{
     height: 50%;
     display: flex;
     justify-content: space-evenly;
-    
     align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
 }
+
 
 nav img{
     background-color: #0075A8;
-    width: 15%;
-    width: 12%;
+    width: 50%;
     border-radius: 50%;
     z-index: 1;
 }
-.facebook,.github,.instagram{
+
+nav img:hover{
+    background-color: #FCDEA2;
+}
+.facebook,.github,.instagram,.linkedin{
     border: 5px solid #0075A8;
+}
+
+.filesandsettings a{
+    text-decoration: none;
+    color: #FCDEA2;
+}
+
+.filesandsettings a:hover{
+    color: #000;
+    text-shadow: #FCDEA2 0px 0px 15px; 
 }
 
 .container .others{
@@ -107,57 +117,71 @@ nav img{
     display: flex;
     padding-left:16%;
 }
-body div{
-    height: 85%;
+.main div{
+    height: 80%;
+    width: 98%;
 }
-
-.main:hover .clip{
-    /* clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%); */
-    
-    clip-path: polygon(100% 100%, 100% 100%, 100% 100%, 100% 100%);
+.main{
     border: 20px solid #0075A8;
-    transition: clip-path 1s ease-in-out;
+    height: 80%;
 }
 
-.clip1:hover{
+.hide{
+    clip-path: polygon(100% 100%, 100% 100%, 100% 100%, 100% 100%);
+    transition: clip-path 0.7s ease-in-out ;
 }
 
-/* ok */
-.main .clip:hover{
+.fullScreen{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transition: clip-path 0.7s ease-in-out ;
+}
+
+.fullScreen h2{
+    
+    transform: translate(-30%, -100%);
 }
 
 .clip{
-    cursor: pointer;
-}
-
-
-.clip.clip1{
     position: absolute;
     background-color:#FCDEA2;
-    /* border: 10px solid #0075A8; */
     padding: 2% 5%;
-    /* clip-path: polygon(0 0, 70% 0, 0 100%, 0 100%); */
+    
+}
+
+.clip.clip1{
     clip-path: polygon(0 0, 65% 0, 37% 44%, 0 100%);
+    transition: clip-path 0.7s ease-in-out ;
+
 }
 
 .clip.clip2{
-
-    position: absolute;
-    background-color:#FCDEA2;
-    /* clip-path: polygon(70% 0, 100% 0, 100% 100%, 39% 44%); */
     clip-path: polygon(65% 0, 100% 0, 100% 100%, 40% 42%);
-    /* clip-path: polygon(65% 0, 100% 0, 100% 100%, 39% 44%); */
-    text-align: right;
-    padding: 2% 5%;
+    transition: clip-path 0.7s ease-in-out ;
+
 }
 .clip.clip3{
-    
-    position: absolute;
-    background-color:#FCDEA2;
+    clip-path: polygon(39% 44%, 39% 44%, 100% 100%, 0 100%);
+    transition: clip-path 0.7s ease-in-out ;
 
-    clip-path: polygon(39% 44%, 39% 44%, 100% 100%, 0 100%);
-    clip-path: polygon(39% 44%, 39% 44%, 100% 100%, 0 100%);
 }
 
+.main button{
+    position: absolute;
+    margin: 0% 91%;
+    background-color: #FCDEA2;
+    color: #000;
+    z-index: 1;
+}
 
+.clip h2{
+    position: absolute;
+    font-size:6rem;
+}
+.clip2 h2{
+    margin-left: 55%;
+    margin-top: 3%;
+}
+.clip3 h2{
+    margin-left: 28%;
+    margin-top: 17%;
+}
