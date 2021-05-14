@@ -1,5 +1,5 @@
 let clipContainer = document.getElementsByClassName('clipContainer')[0];
-let clips = document.getElementsByClassName('clip');
+let clips = document.getElementsByClassName('clips');
 let clip1 = clips[0];
 let clip2 = clips[1];
 let clip3 = clips[2];
@@ -23,6 +23,7 @@ function FullScreen(clip,name)
   console.log('FullSCREEN HAS BEEN CALLED');
   clip.classList.replace(name, 'fullScreen');
   clip.appendChild(button);
+  console.log(clip);
 }
 
 function Restore(e)
